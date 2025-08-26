@@ -16,15 +16,15 @@ const Home = () => {
       <Hero />
        <div className="flex bg-[#FFD300] py-5 text-white">
         <ul className='flex gap-5 items-center justify-center mx-auto'>
-            <li className='uppercase font-sketch hover:text-[#4A4A4A] text-base cursor-pointer font-bold'>About Us</li>
+            <li className='uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold'>About Us</li>
             <FaStar className='text-[#4A4A4A]' />
-            <li className='uppercase font-sketch hover:text-[#4A4A4A] text-base cursor-pointer font-bold'>Our Menus</li>
+            <li className='uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold'>Our Menus</li>
              <FaStar className='text-[#4A4A4A]' />
-            <li className='uppercase font-sketch hover:text-[#4A4A4A] text-base cursor-pointer font-bold'>Where to find us</li>
+            <li className='uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold'>Where to find us</li>
              <FaStar className='text-[#4A4A4A]' />
-            <li className='uppercase font-sketch hover:text-[#4A4A4A] text-base cursor-pointer font-bold'>events & catering</li>
+            <li className='uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold'>events & catering</li>
              <FaStar className='text-[#4A4A4A]' />
-            <li className='uppercase font-sketch hover:text-[#4A4A4A] text-base cursor-pointer font-bold'>contact us</li>
+            <li className='uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold'>contact us</li>
         </ul>
        </div>
        <div className="flex bg-[#4A4A4A]  py-16 pb-50">
