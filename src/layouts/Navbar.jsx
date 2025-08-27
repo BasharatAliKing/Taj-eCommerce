@@ -36,7 +36,7 @@ const Navbar = () => {
       {navbar && (
         <div className="fixed bg-charkol h-full overflow-scroll w-full left-0 top-0 z-40">
           {/* menu items go here */}
-       <div className="flex flex-col gap-2 ml-5 justify-end mb-20 mt-auto h-screen w-full">
+       <div className="flex flex-col gap-2 ml-5 justify-end mb-20 mt-auto h-[90vh] w-full">
           <ul className='flex flex-col gap-2 '>
            <li className='text-white font-bold font-sketch text-2xl uppercase'>About Us</li>
           <li className='text-white font-bold font-sketch text-2xl uppercase'>Our Menus</li>
