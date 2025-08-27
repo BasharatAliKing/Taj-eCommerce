@@ -54,7 +54,7 @@ const Navbar = () => {
           <li className='text-white font-bold font-sketch text-base '>Feedback</li>
           <li className='text-white font-bold font-sketch text-base '>FAQs</li>
          </ul>
-              <ul className="flex items-center gap-2">
+              <ul className="flex items-center ml-5 gap-2">
               <Link
                 data-tooltip-id="telegram"
                 to=""

@@ -99,7 +99,7 @@ const OurVenues = () => {
    <div className="relative bg-cover bg-center bg-[url(/wheretofindus.jpg)]">
       <div className="flex flex-col gap-20 bg-[#221b4b80] py-16 pb-30">
          <img src="/our-venues-far-and-wide.png" className='mx-auto w-[30%]' alt="" />
-    <div className="hidden md:flex max-w-[800px] mx-auto">
+    <div className=" max-w-[800px] mx-auto">
         <Slider {...mainvenues}>
       {
         venues.map((val,index)=>(

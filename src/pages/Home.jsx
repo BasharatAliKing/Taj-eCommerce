@@ -64,7 +64,7 @@ const Home = () => {
       <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/food-to-make.jpg)]">
         <img
           src="/british-asian-kitchen.png"
-          className="absolute -top-13 md:-top-25 right-5 md:right-0 md:left-20 z-10 w-[30%] md:w-[15%]"
+          className="absolute -top-15 md:-top-25 right-5 md:right-0 md:left-20 z-10 w-[30%] md:w-[15%]"
           alt=""
         />
         <img
@@ -130,7 +130,7 @@ const Home = () => {
       </div>
       {/* my lahore rewards */}
       <div className="relative  bg-cover bg-center bg-[url(/button-pattern-pink.png)]">
-        <div className=" pb-30 md:pb-20 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
+        <div className=" pb-20 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
           <div className="container flex flex-col md:flex-row">
             <div className="flex flex-col md:gap-5 md:w-1/2">
               <img src="/new-rewards.png" className="md:w-[80%]" alt="my-img" />
@@ -190,7 +190,9 @@ const Home = () => {
           </g>
         </svg>
       </div>
-      <OurVenues />
+      <div className="hidden md:flex">
+         <OurVenues />
+      </div>
       {/* fusion to be celebrated */}
       <div className="relative -mt-15 py-30 md:py-16  bg-cover bg-center bg-[url(/parallel--yellow-green--large.png)]">
         <img
