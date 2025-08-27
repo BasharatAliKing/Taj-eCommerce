@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <div className="flex bg-[#FFD300] py-5 text-white">
+      <div className="hidden md:flex bg-[#FFD300] py-5 text-white">
         <ul className="flex gap-5 items-center justify-center mx-auto">
           <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             About Us
@@ -33,13 +33,13 @@ const Home = () => {
           </li>
         </ul>
       </div>
-      <div className="flex bg-[#4A4A4A]  py-16 pb-50">
+      <div className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
         <div className="container">
-          <img src="/welcome.png" width="70%" alt="" />
+          <img src="/welcome.png" className="w-full md:w-[70%]" alt="" />
         </div>
       </div>
       {/* yellow line image */}
-      <div className="-mt-25">
+      <div className="hidden md:flex lg:-mt-25">
         <svg
           width="100%"
           height="100"
@@ -61,11 +61,10 @@ const Home = () => {
         </svg>
       </div>
       {/* food to make */}
-      <section className="relative h-[120vh] bg-cover bg-center bg-[url(/food-to-make.jpg)]">
+      <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/food-to-make.jpg)]">
         <img
           src="/british-asian-kitchen.png"
-          className="absolute -top-25 left-20 z-10"
-          width="15%"
+          className="absolute -top-20 md:-top-25 right-5 md:right-0 md:left-20 z-40 w-[30%] md:w-[15%]"
           alt=""
         />
         <img
@@ -86,27 +85,28 @@ const Home = () => {
       </section>
       {/* food-Menus */}
       <div className="relative py-16 bg-[#4A4A4A]">
-        <div className="absolute flex flex-col gap-5 right-20 w-[300px] top-70  z-20">
-          <img src="/sparklewowed.png" className="" alt="" />
-          <img src="/burger-outline--large.png" className="" alt="" />
-          <img src="/homemade.png" className="" alt="" />
-        </div>
+        <img src="/100-halal.png" className="absolute -top-15 right-10 md:right-25 w-[30%] md:w-[15%]"  alt="" />
         <div className="container w-full flex flex-col gap-10">
-          <img src="/our-food-menus--large.png" width="50%" alt="" />
+          <img src="/our-food-menus--large.png" className="md:w-[50%}" alt="" />
           <p className="md:w-[50%] text-base text-white font-semibold">
             If variety is the spice of life…we’re pretty hot! At MyLahore you’ll
             enjoy traditional tastes with a modern twist (and a personal touch)
             as we get creative with the finest, freshest ingredients. Tuck into
             our 100% halal choices below:
           </p>
-          <div className="flex gap-5 md:w-[50%]">
-            <button className="bg-[#FFD300] p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+          <div className="flex flex-col md:flex-row gap-5 md:w-[50%]">
+            <button className="bg-[#FFD300] p-3 md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               MAIN MENU
             </button>
-            <button className="bg-[#FFD300] p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+            <button className="bg-[#FFD300] p-3 md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               CATERING
             </button>
           </div>
+        </div>
+           <div className="md:absolute flex flex-col mt-10 md:mt-auto gap-5 right-20 w-[300px] mx-auto top-70  z-20">
+          <img src="/sparklewowed.png" className="" alt="" />
+          <img src="/burger-outline--large.png" className="" alt="" />
+          <img src="/homemade.png" className="" alt="" />
         </div>
       </div>
       {/* repeating background */}
@@ -118,27 +118,25 @@ const Home = () => {
       <div className="flex absolute w-full">
         <img
           src="/stars.svg"
-          className="absolute -top-18 right-20  z-30"
-          width="6%"
+          className="absolute -top-10 md:-top-18 right-10 md:right-20  z-30 w-[10%] md:w-[6%]"
           alt=""
         />
-        <img
+       <img
           src="/stars.svg"
-          className="absolute  z-30 left-20 top-10"
-          width="6%"
+          className="absolute left-10  md:left-20 top-10  z-30 w-[10%] md:w-[6%]"
           alt=""
         />
-        <img src="/bg.png" className="relative w-full -mt-30 z-10" alt="" />
+        <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="" />
       </div>
       {/* my lahore rewards */}
       <div className="relative  bg-cover bg-center bg-[url(/button-pattern-pink.png)]">
-        <div className="py-16 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
-          <div className="container flex ">
-            <div className="flex flex-col gap-5 md:w-1/2">
+        <div className=" pb-30 md:pb-0 md:py-16 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
+          <div className="container flex flex-col md:flex-row">
+            <div className="flex flex-col md:gap-5 md:w-1/2">
               <img src="/new-rewards.png" width="80%" alt="" />
               <img src="/new-rewards-scheme.png" width="80%" alt="" />
             </div>
-            <div className="flex flex-col gap-5 md:w-1/2 my-auto">
+            <div className="flex flex-col gap-3 md:gap-5 md:w-1/2 my-auto">
               <p className="text-base text-white font-semibold">
                 Save money and enjoy more with MyLahore Rewards – sign up today!
               </p>
@@ -171,7 +169,7 @@ const Home = () => {
         </div>
       </div>
       {/* yellow line image */}
-      <div className="-mt-25 relative z-10">
+      <div className="hidden md:flex -mt-25 relative z-10">
         <svg
           width="100%"
           height="100"
@@ -205,7 +203,7 @@ const Home = () => {
           <img src="/a-fusion-of-all.png" alt="" />
           <img
             src="/baguette.png"
-            className="absolute right-20"
+            className="absolute -bottom-10 right-20"
             width="30%"
             alt=""
           />
@@ -220,8 +218,8 @@ const Home = () => {
       {/* Catering for Special Occasions */}
       <div className="relative bg-cover bg-center bg-[url(/CateringLargeComp.jpg)]">
         <div className="bg-[#221b4b40] py-20">
-          <div className="container flex gap-10">
-            <img src="/catering-for-special-occasions.png" className="mb-auto" width="50%" alt="" />
+          <div className="container flex flex-col md:flex-row gap-10">
+            <img src="/catering-for-special-occasions.png" className="mb-auto w-auto md:w-[50%]" alt="" />
             <div className="flex flex-col gap-5">
               <div className="flex bg-[#ce357799] p-3 rounded-md flex-col gap-1">
                 <p className="text-white text-lg font-medium font-sketch">
