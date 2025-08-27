@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       <div className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
         <div className="container">
-          <img src="/welcome.png" className="w-full md:w-[70%]" alt="" />
+          <img src="/welcome.png" className="w-full md:w-[60%]" alt="" />
         </div>
       </div>
       {/* yellow line image */}
@@ -64,7 +64,7 @@ const Home = () => {
       <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/food-to-make.jpg)]">
         <img
           src="/british-asian-kitchen.png"
-          className="absolute -top-20 md:-top-25 right-5 md:right-0 md:left-20 z-40 w-[30%] md:w-[15%]"
+          className="absolute -top-13 md:-top-25 right-5 md:right-0 md:left-20 z-10 w-[30%] md:w-[15%]"
           alt=""
         />
         <img
@@ -85,9 +85,9 @@ const Home = () => {
       </section>
       {/* food-Menus */}
       <div className="relative py-16 bg-[#4A4A4A]">
-        <img src="/100-halal.png" className="absolute -top-15 right-10 md:right-25 w-[30%] md:w-[15%]"  alt="" />
+        <img src="/100-halal.png" className="absolute -top-10 right-10 md:right-25 w-[30%] md:w-[15%]"  alt="" />
         <div className="container w-full flex flex-col gap-10">
-          <img src="/our-food-menus--large.png" className="md:w-[50%}" alt="" />
+          <img src="/our-food-menus--large.png" className="md:w-[50%]" alt="" />
           <p className="md:w-[50%] text-base text-white font-semibold">
             If variety is the spice of life…we’re pretty hot! At MyLahore you’ll
             enjoy traditional tastes with a modern twist (and a personal touch)
@@ -95,10 +95,10 @@ const Home = () => {
             our 100% halal choices below:
           </p>
           <div className="flex flex-col md:flex-row gap-5 md:w-[50%]">
-            <button className="bg-[#FFD300] p-3 md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+            <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               MAIN MENU
             </button>
-            <button className="bg-[#FFD300] p-3 md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+            <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               CATERING
             </button>
           </div>
@@ -118,23 +118,23 @@ const Home = () => {
       <div className="flex absolute w-full">
         <img
           src="/stars.svg"
-          className="absolute -top-10 md:-top-18 right-10 md:right-20  z-30 w-[10%] md:w-[6%]"
-          alt=""
+          className="absolute -top-10 md:-top-18 right-10 md:right-20  z-20 w-[15%] md:w-[6%]"
+          alt="my-img"
         />
        <img
           src="/stars.svg"
-          className="absolute left-10  md:left-20 top-10  z-30 w-[10%] md:w-[6%]"
-          alt=""
+          className="absolute left-10  md:left-20 top-10  z-20 w-[15%] md:w-[6%]"
+          alt="my-img"
         />
-        <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="" />
+        <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="my-img" />
       </div>
       {/* my lahore rewards */}
       <div className="relative  bg-cover bg-center bg-[url(/button-pattern-pink.png)]">
-        <div className=" pb-30 md:pb-0 md:py-16 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
+        <div className=" pb-30 md:pb-20 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
           <div className="container flex flex-col md:flex-row">
             <div className="flex flex-col md:gap-5 md:w-1/2">
-              <img src="/new-rewards.png" width="80%" alt="" />
-              <img src="/new-rewards-scheme.png" width="80%" alt="" />
+              <img src="/new-rewards.png" className="md:w-[80%]" alt="my-img" />
+              <img src="/new-rewards-scheme.png" className="md:w-[80%]" alt="" />
             </div>
             <div className="flex flex-col gap-3 md:gap-5 md:w-1/2 my-auto">
               <p className="text-base text-white font-semibold">
@@ -192,25 +192,24 @@ const Home = () => {
       </div>
       <OurVenues />
       {/* fusion to be celebrated */}
-      <div className="relative -mt-15 py-16  bg-cover bg-center bg-[url(/parallel--yellow-green--large.png)]">
+      <div className="relative -mt-15 py-30 md:py-16  bg-cover bg-center bg-[url(/parallel--yellow-green--large.png)]">
         <img
           src="/stars.svg"
-          className="absolute right-20 top-0"
-          width="7%"
+          className="absolute right-10 md:right-20 top-0 w-[20%] md:w-[7%]"
           alt=""
         />
         <div className="container flex">
           <img src="/a-fusion-of-all.png" alt="" />
           <img
             src="/baguette.png"
-            className="absolute -bottom-10 right-20"
-            width="30%"
+            className="absolute -bottom-15  md:-bottom-10 right-10 w-[50%] md:right-20 md:w-[20%]"
+           
             alt=""
           />
         </div>
       </div>
       {/* instagram post */}
-      <div className="bg-charkol pt-40 py-16 -mt-10">
+      <div className="bg-charkol md:pt-40 py-30 md:py-16 -mt-10">
         <h1 className="text-xl text-white mt-5 font-bold uppercase text-center font-dancing">
           Checkout our Instagram for latest updates
         </h1>
