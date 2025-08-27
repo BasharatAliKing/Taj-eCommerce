@@ -128,6 +128,28 @@ const Home = () => {
 </svg>
        </div>
        <OurVenues/>
+       {/* fusion to be celebrated */}
+      <div className="relative -mt-15 py-16  bg-cover bg-center bg-[url(/parallel--yellow-green--large.png)]">
+         <div className="container flex">
+            <img src="/a-fusion-of-all.png" alt="" />
+            <img src="/baguette.png" className='absolute right-20' width="30%" alt="" />
+         </div>
+       </div>
+       {/* instagram post */}
+       <div className="bg-charkol pt-40 py-16 -mt-10">
+          <h1 className='text-xl text-white mt-5 font-bold uppercase text-center font-dancing'>Checkout our Instagram for latest updates</h1>
+       </div>
+       <div className="relative bg-cover bg-center bg-[url(/CateringLargeComp.jpg)]">
+          <div className="bg-[#221b4b40] py-20">
+            <div className="container flex gap-10">
+                 <img src="/catering-for-special-occasions.png" width="50%" alt="" />
+             <div className="flex">
+
+             </div>
+            </div>
+          </div>
+       </div>
+      
     </>
   )
 }

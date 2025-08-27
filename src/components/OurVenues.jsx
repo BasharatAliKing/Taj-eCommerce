@@ -1,13 +1,112 @@
 import React from 'react'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+const venues=[
+  {
+    id:1,
+    img1:'/venue-icon--Flag.png',
+    heading1:'BradFord Flagship',
+    heading2:'Our first venue!',
+    openingtime:'Monday - Thursday : 12pm-11pm',
+    openingfritime:'Friday : 12pm-12am',
+    openingsattime:'Saturday : 1pm-1am',
+    openingsuntime:'Saturday : 1pm-1am',
+    contactdetail:'52 Great Horton Road',
+    contactdetailtwo:'Bradford',
+    contactdetailthree:'BD7 1AL',
+    contactdetailfour:'01274 308 508',
+    maincolor:'#4A4A4A',
+    bordercolor:'#3c3437',
+  },
+  {
+    id:2,
+    img1:'/venue-icon--Delivery.png',
+    heading1:'BradFord Delivery',
+    heading2:'Fast and efficient',
+    openingtime:'Monday - Sunday : 4pm-1am',
+    openingfritime:'',
+    openingsattime:'',
+    openingsuntime:'',
+    contactdetail:'348 Great Horton Road',
+    contactdetailtwo:'Bradford',
+    contactdetailthree:'BD7 1QJ',
+    contactdetailfour:'01274 521 732',
+     maincolor:'#e95247',
+    bordercolor:'#e2291b',
+  },
+  {
+    id:3,
+    img1:'/venue-icon--Flag.png',
+    heading1:'BradFord Flagship',
+    heading2:'Our first venue!',
+    openingtime:'Monday - Thursday : 12pm-11pm',
+    openingfritime:'Friday : 12pm-12am',
+    openingsattime:'Saturday : 1pm-1am',
+    openingsuntime:'Saturday : 1pm-1am',
+    contactdetail:'52 Great Horton Road',
+    contactdetailtwo:'Bradford',
+    contactdetailthree:'BD7 1AL',
+    contactdetailfour:'01274 308 508',
+     maincolor:'#4A4A4A',
+    bordercolor:'#3c3437',
+  },
+  {
+    id:4,
+    img1:'/venue-icon--Flag.png',
+    heading1:'BradFord Flagship',
+    heading2:'Our first venue!',
+    openingtime:'Monday - Thursday : 12pm-11pm',
+    openingfritime:'Friday : 12pm-12am',
+    openingsattime:'Saturday : 1pm-1am',
+    openingsuntime:'Saturday : 1pm-1am',
+    contactdetail:'52 Great Horton Road',
+    contactdetailtwo:'Bradford',
+    contactdetailthree:'BD7 1AL',
+    contactdetailfour:'01274 308 508',
+     maincolor:'#4A4A4A',
+    bordercolor:'#3c3437',
+  },
+  {
+    id:5,
+    img1:'/venue-icon--Flag.png',
+    heading1:'BradFord Flagship',
+    heading2:'Our first venue!',
+    openingtime:'Monday - Thursday : 12pm-11pm',
+    openingfritime:'Friday : 12pm-12am',
+    openingsattime:'Saturday : 1pm-1am',
+    openingsuntime:'Saturday : 1pm-1am',
+    contactdetail:'52 Great Horton Road',
+    contactdetailtwo:'Bradford',
+    contactdetailthree:'BD7 1AL',
+    contactdetailfour:'01274 308 508',
+     maincolor:'#4A4A4A',
+    bordercolor:'#3c3437',
+  },
 
+]
 const OurVenues = () => {
+    var mainvenues = {
+    dots: false,
+    infinite: true,
+  //  autoplay: true,
+    arrows: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
    <div className="relative bg-cover bg-center bg-[url(/wheretofindus.jpg)]">
-      <div className="flex flex-col gap-20 bg-[#221b4b80] py-16">
+      <div className="flex flex-col gap-20 bg-[#221b4b80] py-16 pb-30">
          <img src="/our-venues-far-and-wide.png" className='mx-auto w-[30%]' alt="" />
-         <div className="menu-card relative p-10 bg-charkol border-[25px] border-[#3c3437] h-[515px] w-[800px] mx-auto">
-           <div className="flex items-center justify-center -top-20 z-20 left-73 absolute bg-[#3c3437] h-[150px] w-[150px] p-5 rounded-full">
-          <img src="/venue-icon--Flag.png"  alt="" />
+    <div className=" max-w-[800px] mx-auto">
+        <Slider {...mainvenues}>
+      {
+        venues.map((val,index)=>(
+          <div className="mt-15 max-w-[800px] bg-[#121212] mx-auto">
+             <div key={index} className="relative z-10 p-10 border-[25px] h-[515px] w-[800px]" style={{ borderColor: val.bordercolor, backgroundColor: val.maincolor }}>
+           <div className="flex items-center justify-center -top-20  left-73 z-50 absolute  h-[150px] w-[150px] p-5 rounded-full" style={{backgroundColor: val.bordercolor}}>
+          <img src={val.img1}  alt="" />
            </div>
            <>
             {/* left-images */}
@@ -77,26 +176,31 @@ const OurVenues = () => {
               <img src="/dot--vertical.png" className='absolute -top-4 left-167' alt="" />
               <img src="/dot--vertical.png" className='absolute -top-4 left-178' alt="" />
            </>
-           <img src="/bradford-delivery1.png" className='mx-auto mt-10' alt="my-img" />
-           <h1 className='text-3xl text-yellow font-bold uppercase text-center font-dancing'>Our first venue!</h1>
+         <h1 className='text-6xl text-white mt-10 text-center font-bold font-norican'>{val.heading1}</h1>
+           <h1 className='text-3xl text-yellow mt-5 font-bold uppercase text-center font-dancing'>{val.heading2}</h1>
            <div className="flex gap-5 mt-10">
             <div className="w-1/2 text-center">
             <h3 className='text-lg text-yellow font-semibold uppercase'>Opening Times</h3>
-            <p className='text-white text-lg font-medium font-sketch'>Monday - Thursday : 12pm-11pm</p>
-            <p className='text-white text-lg font-medium font-sketch'>Friday : 12pm-12am</p>
-            <p className='text-white text-lg font-medium font-sketch'>Saturday : 1pm-1am</p>
-            <p className='text-white text-lg font-medium font-sketch'>Sunday : 1pm-11pm</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.openingtime}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.openingfritime}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.openingsattime}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.openingsuntime}</p>
             </div>
             <hr className='bg-yellow text-yellow w-[1px] h-[150px]' />
             <div className="w-1/2 text-center">
             <h3 className='text-lg text-yellow font-semibold uppercase'>Contact Details</h3>
-            <p className='text-white text-lg font-medium font-sketch'>52 Great Horton Road</p>
-            <p className='text-white text-lg font-medium font-sketch'>Bradford</p>
-            <p className='text-white text-lg font-medium font-sketch'>BD7 1AL</p>
-            <p className='text-white text-lg font-medium font-sketch'>01274 308 508</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.contactdetail}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.contactdetailtwo}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.contactdetailthree}</p>
+            <p className='text-white text-lg font-medium font-sketch'>{val.contactdetailfour}</p>
             </div>
            </div>
          </div>
+      </div>
+        ))
+      }
+      </Slider>
+    </div>
       </div>
     </div>
   )

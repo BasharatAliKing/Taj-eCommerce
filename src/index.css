@@ -9,6 +9,8 @@
     --color-liblack:#6d7a83;
     --font-dancing:"Oswald", sans-serif;
     --font-sketch:"Cabin Sketch", sans-serif;
+    --font-norican: "Norican", cursive;
+
     --animate-bulb:  lights 4s .375s infinite;
     --animate-scl: wiggle 0.3s ease-out
 }
