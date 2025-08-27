@@ -38,11 +38,11 @@ const Navbar = () => {
           {/* menu items go here */}
        <div className="flex flex-col gap-2 ml-5 justify-end mb-20 mt-auto h-[90vh] w-full">
           <ul className='flex flex-col gap-2 '>
-           <a href='#about-us' className='text-white font-bold font-sketch text-2xl uppercase'>About Us</a>
-          <a href='#menu' className='text-white font-bold font-sketch text-2xl uppercase'>Our Menus</a>
-          <a href='#where-to-find-us' className='text-white font-bold font-sketch text-2xl uppercase'>where to find us</a>
-          <a href='#events' className='text-white font-bold font-sketch text-2xl uppercase'>events & catering</a>
-          <a href='#contact-us' className='text-white font-bold font-sketch text-2xl uppercase'>contact us</a>
+           <a onClick={()=>{setNavbar(false)}} href='#about-us' className='text-white font-bold font-sketch text-2xl uppercase'>About Us</a>
+          <a onClick={()=>{setNavbar(false)}} href='#menu' className='text-white font-bold font-sketch text-2xl uppercase'>Our Menus</a>
+          <a onClick={()=>{setNavbar(false)}} href='#where-to-find-us' className='text-white font-bold font-sketch text-2xl uppercase'>where to find us</a>
+          <a onClick={()=>{setNavbar(false)}} href='#events' className='text-white font-bold font-sketch text-2xl uppercase'>events & catering</a>
+          <a onClick={()=>{setNavbar(false)}} href='#contact-us' className='text-white font-bold font-sketch text-2xl uppercase'>contact us</a>
          </ul>
          <hr className='w-15 h-[2px] text-white ' />
           <ul className='flex flex-col gap-2'>
