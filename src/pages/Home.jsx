@@ -203,7 +203,6 @@ const Home = () => {
           <img
             src="/baguette.png"
             className="absolute -bottom-15  md:-bottom-10 right-10 w-[50%] md:right-20 md:w-[20%]"
-           
             alt=""
           />
         </div>
