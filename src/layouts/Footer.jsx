@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           <div className="flex flex-col gap-3">
             <img src="/logo.png" alt="my-img" className='rounded-full' width="40%" />
-            <p className="text-white font-medium text-[14px] md:text-[16px]">
+            <p className="text-white font-medium font-sketch text-[14px] md:text-[16px]">
               In a world on the edge of ecological collapse, Green CEOs emerge
               as a powerful initiative where leaders trade ideas for saplings
               and spreadsheets of flora. The
@@ -59,85 +59,85 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-5">
-            <h2 className="font-bold text-[20px] md:text-xl text-yellow font-dancing">
+            <h2 className="font-bold text-[20px] md:text-xl text-yellow font-sketch">
               USEFUL LINKS
             </h2>
             <ul className="md:w-1/2 flex flex-col gap-3 text-white">
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Our Story
               </Link>
               <Link
                 to="/"
-                className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Our Menus
               </Link>
               <Link
                 to="/"
-                className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Where to Find us
               </Link>
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Charity request
               </Link>
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Catering & Events
               </Link>
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Gallery
               </Link>
             </ul>
           </div>
           <div className="flex flex-col gap-5">
-            <h2 className="font-bold text-[20px] md:text-xl uppercase font-dancing text-yellow">
+            <h2 className="font-bold text-[20px] md:text-xl uppercase font-sketch text-yellow">
               Quick Links
             </h2>
             <ul className="md:w-1/2 flex flex-col gap-3 text-white">
               <Link
                 to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                Join the Family
               </Link>
               <Link
                 to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Our Heritage
               </Link>
               <li
-                className="relative w-full flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="relative w-full flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
               Allergen Info 
                 {/* >    Advertise Our Magazine / Advertise on Social Media / Advertise on podcast / */}
               </li>
               <Link
                 to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Gift Cards
               </Link>
               <Link
                 to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
               Rewards
               </Link>
            
               <Link
                 to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
+                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Gallery
               </Link>
             </ul>
           </div>
           <div className="flex flex-col gap-3">
-            <h2 className="font-bold text-[20px] md:text-xl font-dancing uppercase text-yellow">
+            <h2 className="font-bold text-[20px] md:text-xl font-sketch uppercase text-yellow">
               Download the App
             </h2>
-           <p className="flex flex-row text-white gap-1 items-center font-medium duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">Say hello to our refreshed App! Rewards, perks & the MyLahore world at your fingertips.</p>
+           <p className="flex flex-row text-white gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">Say hello to our refreshed App! Rewards, perks & the MyLahore world at your fingertips.</p>
              <div className="flex gap-5">
                 <img src="/google-play.png" width="40%" alt="" />
                 <img src="/app-store.png" width="40%" alt="" />
