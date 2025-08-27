@@ -1,11 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Welcome from "../components/Welcome";
-import Menu from "../components/Menu";
-import Rewards from "../components/Rewards";
-import Venues from "../components/Venues";
-import Fusion from "../components/Fusion";
-import Catering from "../components/Catering";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import { FaStar } from "react-icons/fa";
@@ -223,6 +217,7 @@ const Home = () => {
           Checkout our Instagram for latest updates
         </h1>
       </div>
+      {/* Catering for Special Occasions */}
       <div className="relative bg-cover bg-center bg-[url(/CateringLargeComp.jpg)]">
         <div className="bg-[#221b4b40] py-20">
           <div className="container flex gap-10">
@@ -293,6 +288,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
