@@ -24,8 +24,6 @@ const OurVenues = () => {
             <img src="/dot--vertical.png" className='absolute top-96 -left-4' alt="" />
             <img src="/dot--vertical.png" className='absolute top-107 -left-4' alt="" />
             <img src="/dot--vertical.png" className='absolute top-118 -left-4' alt="" />
-            <img src="/dot--vertical.png" className='absolute top-128 -left-4' alt="" />
-            <img src="/dot--vertical.png" className='absolute top-139 -left-4' alt="" />
             {/* Right-images */}
             <img src="/dot--vertical.png" className='absolute -top-4 -right-4' alt="" />
             <img src="/dot--vertical.png" className='absolute top-6 -right-4' alt="" />
@@ -40,8 +38,6 @@ const OurVenues = () => {
             <img src="/dot--vertical.png" className='absolute top-96 -right-4' alt="" />
             <img src="/dot--vertical.png" className='absolute top-107 -right-4' alt="" />
             <img src="/dot--vertical.png" className='absolute top-118 -right-4' alt="" />
-            <img src="/dot--vertical.png" className='absolute top-128 -right-4' alt="" />
-            <img src="/dot--vertical.png" className='absolute top-140 -right-4' alt="" />
             {/* bottom Images */}
               <img src="/dot--vertical.png" className='absolute top-118 left-6' alt="" />
               <img src="/dot--vertical.png" className='absolute top-118 left-16' alt="" />
@@ -91,6 +87,7 @@ const OurVenues = () => {
             <p className='text-white text-lg font-medium font-sketch'>Saturday : 1pm-1am</p>
             <p className='text-white text-lg font-medium font-sketch'>Sunday : 1pm-11pm</p>
             </div>
+            <hr className='bg-yellow text-yellow w-[1px] h-[150px]' />
             <div className="w-1/2 text-center">
             <h3 className='text-lg text-yellow font-semibold uppercase'>Contact Details</h3>
             <p className='text-white text-lg font-medium font-sketch'>52 Great Horton Road</p>
