@@ -36,15 +36,16 @@ const Navbar = () => {
       {navbar && (
         <div className="fixed bg-charkol h-full overflow-scroll w-full left-0 top-0 z-40">
           {/* menu items go here */}
-         <ul className='flex flex-col gap-2 m-5'>
+       <div className="flex flex-col gap-2 ml-5 justify-end mb-20 mt-auto h-screen w-full">
+          <ul className='flex flex-col gap-2 '>
            <li className='text-white font-bold font-sketch text-2xl uppercase'>About Us</li>
           <li className='text-white font-bold font-sketch text-2xl uppercase'>Our Menus</li>
           <li className='text-white font-bold font-sketch text-2xl uppercase'>where to find us</li>
           <li className='text-white font-bold font-sketch text-2xl uppercase'>events & catering</li>
           <li className='text-white font-bold font-sketch text-2xl uppercase'>contact us</li>
          </ul>
-         <hr className='w-15 h-[2px] text-white ml-5' />
-          <ul className='flex flex-col gap-2 m-5'>
+         <hr className='w-15 h-[2px] text-white ' />
+          <ul className='flex flex-col gap-2'>
            <li className='text-white font-bold font-sketch text-base '>Join the family</li>
           <li className='text-white font-bold font-sketch text-base '>Our Heritage</li>
           <li className='text-white font-bold font-sketch text-base '>Allergen Info</li>
@@ -54,7 +55,7 @@ const Navbar = () => {
           <li className='text-white font-bold font-sketch text-base '>Feedback</li>
           <li className='text-white font-bold font-sketch text-base '>FAQs</li>
          </ul>
-              <ul className="flex items-center ml-5 gap-2">
+              <ul className="flex items-center gap-2">
               <Link
                 data-tooltip-id="telegram"
                 to=""
@@ -91,6 +92,7 @@ const Navbar = () => {
                 <FaFacebookF className="text-white text-md" />{" "}
               </Link>
             </ul>
+       </div>
         </div>
       )}
     </div>
