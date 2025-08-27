@@ -9,6 +9,7 @@ import Catering from "../components/Catering";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import { FaStar } from 'react-icons/fa';
+import OurVenues from '../components/OurVenues';
 const Home = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const Home = () => {
          <img src="/welcome.png" width="70%"  alt="" />
         </div>
        </div>
+        {/* yellow line image */}
        <div className="-mt-25">
           <svg width="100%" height="100" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
   <g fill="#f0d200">
@@ -79,7 +81,6 @@ const Home = () => {
         <img src="/100-superlicious.png" alt="" />
        </div>
     </div>
-
     <div className="flex absolute w-full">
           <img src="/stars.svg" className='absolute -top-18 right-20  z-30' width="6%" alt="" />
             <img src="/stars.svg" className='absolute  z-30 left-20 top-10' width="6%" alt="" />
@@ -109,6 +110,24 @@ const Home = () => {
 
         </div>
      </div>
+     {/* yellow line image */}
+       <div className="-mt-25 relative z-10">
+          <svg width="100%" height="100" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#f0d200">
+    <polygon points="0,0 60,0 100,100 40,100" />
+    <polygon points="120,0 180,0 220,100 160,100" />
+    <polygon points="240,0 300,0 340,100 280,100" />
+    <polygon points="360,0 420,0 460,100 400,100" />
+    <polygon points="480,0 540,0 580,100 520,100" />
+    <polygon points="600,0 660,0 700,100 640,100" />
+    <polygon points="720,0 780,0 820,100 760,100" />
+    <polygon points="840,0 900,0 940,100 880,100" />
+    <polygon points="960,0 1020,0 1060,100 1000,100" />
+    <polygon points="1080,0 1140,0 1180,100 1120,100" />
+  </g>
+</svg>
+       </div>
+       <OurVenues/>
     </>
   )
 }

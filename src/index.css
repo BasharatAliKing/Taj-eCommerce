@@ -12,7 +12,6 @@
     --animate-bulb:  lights 4s .375s infinite;
     --animate-scl: wiggle 0.3s ease-out
 }
-
 @keyframes lights{
 12.5%, 37.5%, 62.5%, 87.5% {
     box-shadow: 0 0 7px 4px #fff;
