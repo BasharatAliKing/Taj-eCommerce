@@ -6,6 +6,8 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
+    <>
+    <img src="/footer-tp.webp" alt="" />
    <div id='contact-us' className="bg-charkol relative py-5 sm:py-10 md:py-20 pb-0 md:pb-0 bg-center bg-cover">
         {/* <img
           src="/footer-line.png"
@@ -63,27 +65,27 @@ const Footer = () => {
               USEFUL LINKS
             </h2>
             <ul className="md:w-1/2 flex flex-col gap-3 text-white">
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <a href="#about-us" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Our Story
-              </Link>
-              <Link
-                to="/"
+              </a>
+              <a
+                href="#food-menu"
                 className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Our Menus
-              </Link>
-              <Link
-                to="/"
+              </a>
+              <a
+                href="#where-to-find-us"
                 className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Where to Find us
-              </Link>
+              </a>
               <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Charity request
               </Link>
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <a href="#catering" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Catering & Events
-              </Link>
+              </a>
               <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Gallery
               </Link>
@@ -154,7 +156,9 @@ const Footer = () => {
             {" "} All Right Reserved!
           </footer>
         </div>
-      </div>
+      </div> 
+      <img src="/pattern-strip-1.svg" alt="" />
+      </>
   )
 }
 
