@@ -2,64 +2,20 @@ import React from "react";
 import Hero from "../components/Hero";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
-import { FaStar } from "react-icons/fa";
 import OurVenues from "../components/OurVenues";
 import { GoDotFill } from "react-icons/go";
+import Fusion from "../components/Fusion";
+import Rewards from "../components/Rewards";
+import Welcome from "../components/Welcome";
+import Menu from "../components/Menu";
 const Home = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <div className="hidden md:flex bg-[#FFD300] py-5 text-white">
-        <ul className="flex gap-5 items-center justify-center mx-auto">
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
-            About Us
-          </li>
-          <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
-            Our Menus
-          </li>
-          <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
-            Where to find us
-          </li>
-          <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
-            events & catering
-          </li>
-          <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
-            contact us
-          </li>
-        </ul>
-      </div>
-      <div className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
-        <div className="container">
-          <img src="/welcome.png" className="w-full md:w-[60%]" alt="" />
-        </div>
-      </div>
-      {/* yellow line image */}
-      <div className="hidden md:flex lg:-mt-25">
-        <svg
-          width="100%"
-          height="100"
-          viewBox="0 0 1200 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g fill="#f0d200">
-            <polygon points="0,0 60,0 100,100 40,100" />
-            <polygon points="120,0 180,0 220,100 160,100" />
-            <polygon points="240,0 300,0 340,100 280,100" />
-            <polygon points="360,0 420,0 460,100 400,100" />
-            <polygon points="480,0 540,0 580,100 520,100" />
-            <polygon points="600,0 660,0 700,100 640,100" />
-            <polygon points="720,0 780,0 820,100 760,100" />
-            <polygon points="840,0 900,0 940,100 880,100" />
-            <polygon points="960,0 1020,0 1060,100 1000,100" />
-            <polygon points="1080,0 1140,0 1180,100 1120,100" />
-          </g>
-        </svg>
-      </div>
+    <Menu/>
+      {/* welcome here */}
+      <Welcome/>
       {/* food to make */}
       <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/food-to-make.jpg)]">
         <img
@@ -129,45 +85,7 @@ const Home = () => {
         <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="my-img" />
       </div>
       {/* my lahore rewards */}
-      <div className="relative  bg-cover bg-center bg-[url(/button-pattern-pink.png)]">
-        <div className=" pb-20 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
-          <div className="container flex flex-col md:flex-row">
-            <div className="flex flex-col md:gap-5 md:w-1/2">
-              <img src="/new-rewards.png" className="md:w-[80%]" alt="my-img" />
-              <img src="/new-rewards-scheme.png" className="md:w-[80%]" alt="" />
-            </div>
-            <div className="flex flex-col gap-3 md:gap-5 md:w-1/2 my-auto">
-              <p className="text-base text-white font-semibold">
-                Save money and enjoy more with MyLahore Rewards – sign up today!
-              </p>
-              <p className="text-base text-white font-semibold">
-                Our huuugely rewarding scheme offers you 10% credit on the value
-                of your restaurant order to use on a future date! So every £10
-                spent earns you £1 worth of credit! For example, spend £50 and
-                get £5 credit to use later!
-              </p>
-              <p className="text-base text-white font-semibold">
-                MyLahore Rewards is available for both dine-in and collection
-                orders in all our stores, as well as telephone delivery orders
-                at our Bradford Delivery store, though not for online delivery
-                orders via UberEats.
-              </p>
-              <p className="text-base text-white font-semibold underline">
-                Terms Apply!
-              </p>
-              <hr />
-              <p className="text-base text-white font-semibold">
-                Say hello to our refreshed App! Rewards, perks & the MyLahore
-                world at your fingertips.
-              </p>
-              <div className="flex gap-5">
-                <img src="/google-play.png" width="30%" alt="" />
-                <img src="/app-store.png" width="30%" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     <Rewards/>
       {/* yellow line image */}
       <div className="hidden md:flex -mt-25 relative z-10">
         <svg
@@ -190,25 +108,11 @@ const Home = () => {
           </g>
         </svg>
       </div>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex flex-col">
          <OurVenues />
       </div>
       {/* fusion to be celebrated */}
-      <div className="relative -mt-15 py-30 md:py-16  bg-cover bg-center bg-[url(/parallel--yellow-green--large.png)]">
-        <img
-          src="/stars.svg"
-          className="absolute right-10 md:right-20 top-0 w-[20%] md:w-[7%]"
-          alt=""
-        />
-        <div className="container flex">
-          <img src="/a-fusion-of-all.png" alt="" />
-          <img
-            src="/baguette.png"
-            className="absolute -bottom-15  md:-bottom-10 right-10 w-[50%] md:right-20 md:w-[20%]"
-            alt=""
-          />
-        </div>
-      </div>
+      <Fusion/>
       {/* instagram post */}
       <div className="bg-charkol md:pt-40 py-30 md:py-16 -mt-10">
         <h1 className="text-xl text-white mt-5 font-bold uppercase text-center font-dancing">
