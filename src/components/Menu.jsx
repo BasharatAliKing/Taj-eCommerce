@@ -1,29 +1,29 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
 const Menu = () => {
   return (
      <div className="hidden md:flex bg-[#FFD300] py-5 text-white">
         <ul className="flex gap-5 items-center justify-center mx-auto">
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
+          <a href='#about-us' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             About Us
-          </li>
+          </a>
           <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
+          <a href='#food-menu' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             Our Menus
-          </li>
+          </a>
           <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
+          <a href='#where-to-find-us' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             Where to find us
-          </li>
+          </a>
           <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
+          <a href='#catering' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             events & catering
-          </li>
+          </a>
           <FaStar className="text-[#4A4A4A]" />
-          <li className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
+          <a href="#contact-us" className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             contact us
-          </li>
+          </a>
         </ul>
       </div>
   )

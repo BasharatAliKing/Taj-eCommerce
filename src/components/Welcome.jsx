@@ -3,7 +3,7 @@ import React from 'react'
 const Welcome = () => {
   return (
     <>
-      <div className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
+      <div id='about-us' className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
         <div className="container">
           <img src="/welcome.png" className="w-full md:w-[60%]" alt="" />
         </div>

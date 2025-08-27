@@ -3,10 +3,10 @@ import React from 'react'
 const Rewards = () => {
   return (
     <div className="relative  bg-cover bg-center bg-[url(/button-pattern-pink.png)]">
-        <div className=" pb-20 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
+        <div className=" pb-20 md:pb-30 pt-28 inset-0 bg-[#4a4a4a8a] bg-opacity-40 flex flex-col  text-white">
           <div className="container flex flex-col md:flex-row">
             <div className="flex flex-col md:gap-5 md:w-1/2">
-              <img src="/new-rewards.png" className="md:w-[80%]" alt="my-img" />
+              <img src="/logo.png" className="md:w-[30%] mx-auto rounded-full" alt="my-img" />
               <img src="/new-rewards-scheme.png" className="md:w-[80%]" alt="" />
             </div>
             <div className="flex flex-col gap-3 md:gap-5 md:w-1/2 my-auto">

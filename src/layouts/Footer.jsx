@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
   return (
-   <div className="bg-charkol relative py-5 sm:py-10 md:py-20 pb-0 md:pb-0 bg-center bg-cover">
+   <div id='contact-us' className="bg-charkol relative py-5 sm:py-10 md:py-20 pb-0 md:pb-0 bg-center bg-cover">
         {/* <img
           src="/footer-line.png"
           className="absolute right-0 z-0 bottom-0 w-[50%] sm:w-[20%]"

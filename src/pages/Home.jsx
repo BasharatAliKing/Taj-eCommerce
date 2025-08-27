@@ -3,11 +3,11 @@ import Hero from "../components/Hero";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import OurVenues from "../components/OurVenues";
-import { GoDotFill } from "react-icons/go";
 import Fusion from "../components/Fusion";
 import Rewards from "../components/Rewards";
 import Welcome from "../components/Welcome";
 import Menu from "../components/Menu";
+import Catering from "../components/Catering";
 const Home = () => {
   return (
     <>
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </section>
       {/* food-Menus */}
-      <div className="relative py-16 bg-[#4A4A4A]">
+      <div id="food-menu" className="relative py-16 bg-[#4A4A4A]">
         <img src="/100-halal.png" className="absolute -top-10 right-10 md:right-25 w-[30%] md:w-[15%]"  alt="" />
         <div className="container w-full flex flex-col gap-10">
           <img src="/our-food-menus--large.png" className="md:w-[50%]" alt="" />
@@ -120,76 +120,7 @@ const Home = () => {
         </h1>
       </div>
       {/* Catering for Special Occasions */}
-      <div className="relative bg-cover bg-center bg-[url(/CateringLargeComp.jpg)]">
-        <div className="bg-[#221b4b40] py-20">
-          <div className="container flex flex-col md:flex-row gap-10">
-            <img src="/catering-for-special-occasions.png" className="mb-auto w-auto md:w-[50%]" alt="" />
-            <div className="flex flex-col gap-5">
-              <div className="flex bg-[#ce357799] p-3 rounded-md flex-col gap-1">
-                <p className="text-white text-lg font-medium font-sketch">
-                  Events and Catering
-                </p>
-                <p className="text-white text-lg font-medium font-sketch">
-                  MyLahore can take care of your catering requirements with a
-                  wide variety of canapes, starters, mains, desserts and
-                  showpiece cakes for all kinds of events at any venue of your
-                  choosing.
-                </p>
-                <ul className="flex flex-col">
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Submit catering <span className="underline">enquiry</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> View our <span className="underline">Events and Catering Brochure</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Landline <span className="underline">01274952111</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Mobile <span className="underline">07498603763</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Email <span className="underline">events@mylahore.co.uk</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Website <span className="underline">bymylahore.co.uk</span></li>
-                </ul>
-
-              </div>
-              <div className="flex bg-[#ce357799] p-3 rounded-md flex-col gap-1">
-                <p className="text-white text-lg font-medium font-sketch">
-                  Events and Catering
-                </p>
-                <p className="text-white text-lg font-medium font-sketch">
-                  MyLahore can take care of your catering requirements with a
-                  wide variety of canapes, starters, mains, desserts and
-                  showpiece cakes for all kinds of events at any venue of your
-                  choosing.
-                </p>
-                <ul className="flex flex-col">
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Submit catering <span className="underline">enquiry</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> View our <span className="underline">Events and Catering Brochure</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Landline <span className="underline">01274952111</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Mobile <span className="underline">07498603763</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Email <span className="underline">events@mylahore.co.uk</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Website <span className="underline">bymylahore.co.uk</span></li>
-                </ul>
-
-              </div>
-              <div className="flex bg-[#ce357799] p-3 rounded-md flex-col gap-1">
-                <p className="text-white text-lg font-medium font-sketch">
-                  Events and Catering
-                </p>
-                <p className="text-white text-lg font-medium font-sketch">
-                  MyLahore can take care of your catering requirements with a
-                  wide variety of canapes, starters, mains, desserts and
-                  showpiece cakes for all kinds of events at any venue of your
-                  choosing.
-                </p>
-                <ul className="flex flex-col">
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Submit catering <span className="underline">enquiry</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> View our <span className="underline">Events and Catering Brochure</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Landline <span className="underline">01274952111</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Mobile <span className="underline">07498603763</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Email <span className="underline">events@mylahore.co.uk</span></li>
-                  <li className="text-white text-lg font-medium font-sketch flex items-center "><GoDotFill className="text-sm mr-1" /> Website <span className="underline">bymylahore.co.uk</span></li>
-                </ul>
-
-              </div>
-           
-            </div>
-          </div>
-        </div>
-      </div>
+     <Catering/>
       <Footer/>
     </>
   );
