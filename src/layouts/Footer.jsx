@@ -18,9 +18,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <img src="/logo.png" alt="my-img" className='rounded-full' width="40%" />
             <p className="text-white font-medium font-sketch text-[14px] md:text-[16px]">
-              In a world on the edge of ecological collapse, Green CEOs emerge
-              as a powerful initiative where leaders trade ideas for saplings
-              and spreadsheets of flora. The
+            K2 Taj Restaurant offers a perfect blend of traditional and modern dining, serving flavorful dishes crafted with authentic recipes and fresh ingredients.
             </p>
             <ul className="flex items-center gap-2">
               <Link
@@ -139,7 +137,7 @@ const Footer = () => {
             <h2 className="font-bold text-[20px] md:text-xl font-sketch uppercase text-yellow">
               Download the App
             </h2>
-           <p className="flex flex-row text-white gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">Say hello to our refreshed App! Rewards, perks & the MyLahore world at your fingertips.</p>
+           <p className="flex flex-row text-white gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">Say hello to our refreshed App! Rewards, perks & the K2 Taj world at your fingertips.</p>
              <div className="flex gap-5">
                 <img src="/google-play.png" width="40%" alt="" />
                 <img src="/app-store.png" width="40%" alt="" />
