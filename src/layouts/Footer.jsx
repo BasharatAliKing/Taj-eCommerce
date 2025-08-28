@@ -155,7 +155,7 @@ const Footer = () => {
           </footer>
         </div>
       </div> 
-      <img src="/pattern-strip-1.svg" alt="" />
+      <img src="/pattern-strip-1.svg" className='w-full' alt="" />
       </>
   )
 }
