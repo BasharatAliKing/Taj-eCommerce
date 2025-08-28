@@ -8,7 +8,7 @@ const Menu = () => {
           <a href='#about-us' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             About Us
           </a>
-          <FaStar className="text-[#4A4A4A]" />
+          {/* <FaStar className="text-[#4A4A4A]" /> */}
           {/* <a href='#food-menu' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             Our Menus
           </a> */}
@@ -16,7 +16,7 @@ const Menu = () => {
           <a href='#where-to-find-us' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             Where to find us
           </a>
-          <FaStar className="text-[#4A4A4A]" />
+          {/* <FaStar className="text-[#4A4A4A]" /> */}
           {/* <a href='#catering' className="uppercase font-sketch text-[#4A4A4A] text-base cursor-pointer font-bold">
             events & catering
           </a> */}
