@@ -4,7 +4,7 @@ const ItemCard = ({ name, price, image }) => {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center p-4">
       <img
-        src={image}
+        src={`http://localhost:3000/${image}`}
         alt={name}
         className="w-full h-56 object-cover rounded-lg"
       />
