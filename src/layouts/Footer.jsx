@@ -151,7 +151,7 @@ const Footer = () => {
           <footer className="text-white py-3 text-center text-[10px] md:text-[14px] duration-700 hover:text-red">
             Copyright &copy; 2025 {" "}
             <Link to="/" className="duration-700 hover:underline">
-              bdking
+              K2 Taj
             </Link>
             {" "} All Right Reserved!
           </footer>

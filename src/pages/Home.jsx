@@ -45,7 +45,7 @@ const Home = () => {
         <div className="container w-full flex flex-col gap-10">
           <img src="/our-food-menus--large.png" className="md:w-[50%]" alt="" />
           <p className="md:w-[50%] text-base text-white font-semibold">
-            If variety is the spice of life…we’re pretty hot! At MyLahore you’ll
+            If variety is the spice of life…we’re pretty hot! At K2 Taj you’ll
             enjoy traditional tastes with a modern twist (and a personal touch)
             as we get creative with the finest, freshest ingredients. Tuck into
             our 100% halal choices below:
@@ -54,9 +54,9 @@ const Home = () => {
             <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               MAIN MENU
             </button>
-            <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+            {/* <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               CATERING
-            </button>
+            </button> */}
           </div>
         </div>
            <div className="md:absolute flex flex-col mt-10 md:mt-auto gap-5 right-20 w-[300px] mx-auto top-70  z-20">
@@ -120,7 +120,7 @@ const Home = () => {
         </h1>
       </div>
       {/* Catering for Special Occasions */}
-     <Catering/>
+     {/* <Catering/> */}
       <Footer/>
     </>
   );
