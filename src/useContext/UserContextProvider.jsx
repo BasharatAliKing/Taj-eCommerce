@@ -7,9 +7,8 @@ import { useLocation } from "react-router-dom";
 const UserContextProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState([]);
-  const [loader,setLoader]=useState(false);
-  const [joinGreen,setJoinGreen]=useState(true);
-  const [toast,setToast]=useState(false);
+  const [total, setTotal] = useState(0);
+  const [cart,setCart]=useState(localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]);
    const authorizationtoken = `Bearer ${token}`;
   const storetokeninLS = (servertoken) => {
     setToken(servertoken);
@@ -20,10 +19,9 @@ const UserContextProvider = ({ children }) => {
     setUser("");
     return localStorage.removeItem("token");
   };
-
   const userAuthentication = async () => {
     try {
-      const response = await fetch(`https://greenceo-backend.onrender.com/user`, {
+      const response = await fetch(`https:localhost:3000/user`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -37,17 +35,22 @@ const UserContextProvider = ({ children }) => {
       console.log(err);
     }
   };
+   useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(storedCart);
+  // calculate total price
+    const cartTotal = storedCart.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+    setTotal(cartTotal);
+  }, [cart]);
   useEffect(() => {
     userAuthentication();
   }, []);
-  useEffect(()=>{
-      setTimeout(() => {
-      setLoader(false);
-    }, 2000);
-  })
  
   return (
-    <UserContext.Provider value={{ storetokeninLS,toast,setToast ,LogoutUser,joinGreen,setJoinGreen,authorizationtoken, user, loader,setLoader}}>
+    <UserContext.Provider value={{ storetokeninLS ,LogoutUser,authorizationtoken, user,cart,setCart,total}}>
       {children}
     </UserContext.Provider>
   );

@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import Header from "../layouts/Header";
+import Footer from "../layouts/Footer";
+import UserContext from "../useContext/UserContext";
 
 const CheckoutPage = () => {
+  const {cart,total}=useContext(UserContext);
   const [formData, setFormData] = useState({
     email: "",
     firstName: "",
@@ -23,25 +27,15 @@ const CheckoutPage = () => {
     e.preventDefault();
     console.log("Order submitted:", formData);
   };
-
+console.log(cart);
   return (
-    <div className="min-h-screen bg-gray-50 flex justify-center py-10 px-4">
+    <div className="min-h-screen font-sketch bg-gray-50 flex justify-center py-10 px-4">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Side */}
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded-2xl p-6 space-y-6"
         >
-          {/* Express Checkout */}
-          <div className="flex gap-4">
-            <button className="flex-1 bg-purple-600 text-white font-semibold py-3 rounded-lg">
-              Shop Pay
-            </button>
-            <button className="flex-1 bg-black text-white font-semibold py-3 rounded-lg">
-              Google Pay
-            </button>
-          </div>
-
           {/* Contact */}
           <div>
             <h2 className="font-semibold text-lg mb-2">Contact</h2>
@@ -54,12 +48,7 @@ const CheckoutPage = () => {
               className="w-full border rounded-lg p-3"
               required
             />
-            <div className="flex items-center mt-2">
-              <input type="checkbox" id="news" className="mr-2" />
-              <label htmlFor="news">Email me with news and offers</label>
-            </div>
           </div>
-
           {/* Delivery */}
           <div>
             <h2 className="font-semibold text-lg mb-2">Delivery</h2>
@@ -175,32 +164,35 @@ const CheckoutPage = () => {
             Review order
           </button>
         </form>
-
         {/* Right Side - Order Summary */}
         <div className="bg-white shadow-md rounded-2xl p-6 h-fit">
           <h2 className="font-semibold text-lg mb-4">Order Summary</h2>
-          <div className="flex items-center gap-4 mb-4">
+        {
+          cart.map((val,index)=>(
+              <div className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4">
             <img
-              src="https://via.placeholder.com/80"
+              src={`http://localhost:3000/${val.imageUrl}`}
               alt="Product"
               className="w-16 h-16 rounded-lg object-cover"
             />
             <div className="flex-1">
-              <p className="font-semibold">Chocolate Brownies Tray Bake</p>
-              <p className="text-gray-600">£17.95</p>
+              <p className="font-semibold">{val.name}</p>
+              <p className="text-gray-600">£{val.price}</p>
             </div>
           </div>
-          <input
+          ))
+        }
+          {/* <input
             type="text"
             placeholder="Discount code or gift card"
             className="w-full border rounded-lg p-3"
           />
-          <button className="w-full border rounded-lg p-2 mt-2">Apply</button>
+          <button className="w-full border rounded-lg p-2 mt-2">Apply</button> */}
 
           <div className="mt-6 border-t pt-4 space-y-2">
             <div className="flex justify-between">
               <span>Subtotal</span>
-              <span>£17.95</span>
+              <span>£{total}</span>
             </div>
             <div className="flex justify-between">
               <span>Shipping</span>
@@ -208,7 +200,7 @@ const CheckoutPage = () => {
             </div>
             <div className="flex justify-between font-semibold text-lg">
               <span>Total</span>
-              <span>£17.95</span>
+              <span>£{total}</span>
             </div>
           </div>
         </div>

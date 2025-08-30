@@ -1,45 +1,28 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import UserContext from "../useContext/UserContext";
+import { Link } from "react-router-dom";
 
-const nav = [
-  { label: 'Home', href: '#top' },
-  { label: 'Menus', href: '#menus' },
-  { label: 'Rewards', href: '#rewards' },
-  { label: 'Venues', href: '#venues' },
-  { label: 'Catering', href: '#catering' },
-  { label: 'Contact', href: '#footer' },
-]
-
-export default function Header() {
+const Header = () => {
+  const {cart,total}=useContext(UserContext);
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="mt-4 flex items-center justify-between rounded-2xl bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 px-4 py-3 shadow">
-          
-          {/* Logo */}
-          <a href="#top" className="flex items-center gap-2">
-            <span className="inline-block rounded-lg bg-yellow-400 px-2 py-1 text-xs font-bold">my</span>
-            <span className="font-display text-lg font-bold tracking-tight">Lahore</span>
-          </a>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex gap-6">
-            {nav.map(n => (
-              <a
-                key={n.href}
-                href={n.href}
-                className="text-sm font-medium hover:text-pink-600"
-              >
-                {n.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* CTA button */}
-          <a href="#order" className="btn bg-pink-600 text-white">
-            Order Online
-          </a>
+    <header className="bg-charkol p-3 text-white">
+      <div className="container mx-auto flex flex-wrap gap-3 items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link to='/' className="flex items-center space-x-2">
+          <img src="/logo.png" alt="my-img " className="h-20 rounded-full" />
+        </Link>
+        {/* Cart */}
+        <div className="relative flex flex-wrap gap-3 items-center space-x-4">
+          <input type="text" placeholder="Search Product..." className="p-2 border rounded-full px-5 border-white outline-none" />
+          <Link to='/cart' className="flex whitespace-nowrap items-center gap-2 bg-[#FFD600] text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+            <FaShoppingCart className="text-lg" />
+            <span>£{total.toFixed(2)} ({cart.length})</span>
+          </Link>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
+
+export default Header;
