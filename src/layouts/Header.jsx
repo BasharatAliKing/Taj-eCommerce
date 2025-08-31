@@ -4,7 +4,7 @@ import UserContext from "../useContext/UserContext";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const {cart,total}=useContext(UserContext);
+  const {cart,total,setSearchItem}=useContext(UserContext);
   return (
     <header className="bg-charkol p-3 text-white">
       <div className="container mx-auto flex flex-wrap gap-3 items-center justify-between px-6 py-4">
@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
         {/* Cart */}
         <div className="relative flex flex-wrap gap-3 items-center space-x-4">
-          <input type="text" placeholder="Search Product..." className="p-2 border rounded-full px-5 border-white outline-none" />
+          <input type="text" onChange={(e)=>setSearchItem(e.target.value)} placeholder="Search Product..." className="p-2 border rounded-full px-5 border-white outline-none" />
           <Link to='/cart' className="flex whitespace-nowrap items-center gap-2 bg-[#FFD600] text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-400 transition">
             <FaShoppingCart className="text-lg" />
             <span>£{total.toFixed(2)} ({cart.length})</span>

@@ -20,7 +20,6 @@ const Hero = () => {
       useEffect(()=>{
         getAllCategory();
       },[]);
-  console.log(category);
   return (
     <section className="relative top-0 md:h-screen bg-cover bg-center bg-[url(/home-bg.jpg)]">
       <div className=" md:absolute pt-[500px] md:pt-0 pb-10 inset-0 bg-[#221b4b80] bg-opacity-40 flex flex-col justify-center items-center text-center text-white px-6">
@@ -30,7 +29,7 @@ const Hero = () => {
           {/* <button className="flex w-full cursor-pointer md:w-[150px] hover:animate-scl h-auto  sm:h-[100px]  md:h-[150px] items-center justify-center text-base  md:text-lg font-dancing font-bold bg-cover bg-no-repeat border-[3px] border-yellow rounded-md p-2  b  bg-[url(/button-pattern-green.png)]">SHARING BOXES & COOKED RANGE</button>*/}
          {
             category.map((cat,index)=>(
-              <Link to={`/product/${cat.categoryname}`} className="flex w-full uppercase cursor-pointer md:w-[150px] hover:animate-scl h-auto  sm:h-[100px]  md:h-[150px] items-center justify-center text-base  md:text-lg font-dancing font-bold bg-cover bg-no-repeat border-[3px] border-yellow rounded-md p-2  bg  bg-[url(/button-pattern-orange.png)]">{cat.categoryname}</Link>
+              <Link key={index} to={`/product/${cat.categoryname}`} className="flex w-full uppercase cursor-pointer md:w-[150px] hover:animate-scl h-auto  sm:h-[100px]  md:h-[150px] items-center justify-center text-base  md:text-lg font-dancing font-bold bg-cover bg-no-repeat border-[3px] border-yellow rounded-md p-2  bg  bg-[url(/button-pattern-orange.png)]">{cat.categoryname}</Link>
             ))
          }
           {/* <button className="flex w-full cursor-pointer md:w-[150px] hover:animate-scl h-auto  sm:h-[100px]  md:h-[150px] items-center justify-center text-base  md:text-lg font-dancing font-bold bg-cover bg-no-repeat border-[3px] border-yellow rounded-md p-2    bg-[url(/button-pattern-pink.png)]">Milk Shakes</button> */}

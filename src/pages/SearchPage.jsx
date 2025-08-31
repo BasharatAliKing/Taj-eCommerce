@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import UserContext from "../useContext/UserContext";
 
-const Product = () => {
+const SearchPage = () => {
   const params = useParams();
+  const navigate=useNavigate();
+  const { searchItem ,setSearchItem } = useContext(UserContext);
   const [item, setItem] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -36,13 +39,12 @@ const Product = () => {
       console.log(error);
     }
   };
-
-  const filteredCategory = categories.filter(
-    (cat) =>
-      cat?.categoryname?.toLowerCase() === (params.id || "").toLowerCase()
-  );
-  const filteredProducts = item.filter(
-    (val) => val?.category?.toLowerCase() === (params.id || "").toLowerCase()
+  const searchbuynow=(id)=>{
+    navigate(`/product-details/${id}`)
+    setSearchItem("");
+  }
+  const filteredProducts = item.filter((val) =>
+    val?.name?.toLowerCase().includes(searchItem.toLowerCase())
   );
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(9);
@@ -60,15 +62,9 @@ const Product = () => {
       {/* Header Section */}
       <div className="flex container flex-col gap-3">
         <h2 className="text-3xl font-bold text-charkol capitalize">
-          {params.id}
+          Search Result: {searchItem}
         </h2>
-        <p className=" text-lg font-sketch md:w-[70%]">
-          {filteredCategory.length > 0
-            ? filteredCategory[0]?.categorydetails
-            : ""}
-        </p>
       </div>
-
       {/* Product Grid */}
       <div className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3 sm:grid-cols-2">
         {paginatedProducts.map((product, index) => (
@@ -84,12 +80,11 @@ const Product = () => {
             <div className="p-4 text-center flex font-sketch flex-col gap-2">
               <h3 className="text-lg font-semibold">{product.name}</h3>
               <p className="text-gray-700">£{product.price}</p>
-              <Link
-                to={`/product-details/${product._id}`}
+              <button onClick={()=>searchbuynow(`${product._id}`)}
                 className="cursor-pointer bg-[#FFD600] text-black font-semibold px-6 py-2 rounded hover:bg-yellow-400 transition"
               >
                 Buy now
-              </Link>
+              </button>
             </div>
           </div>
         ))}
@@ -127,4 +122,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default SearchPage;

@@ -8,6 +8,7 @@ const UserContextProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState([]);
   const [total, setTotal] = useState(0);
+  const [searchItem,setSearchItem]=useState("");
   const [cart,setCart]=useState(localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]);
    const authorizationtoken = `Bearer ${token}`;
   const storetokeninLS = (servertoken) => {
@@ -21,7 +22,7 @@ const UserContextProvider = ({ children }) => {
   };
   const userAuthentication = async () => {
     try {
-      const response = await fetch(`https:localhost:3000/user`, {
+      const response = await fetch(`http://localhost:3000/user`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -44,13 +45,12 @@ const UserContextProvider = ({ children }) => {
       0
     );
     setTotal(cartTotal);
-  }, [cart]);
+  }, []);
   useEffect(() => {
     userAuthentication();
   }, []);
- 
   return (
-    <UserContext.Provider value={{ storetokeninLS ,LogoutUser,authorizationtoken, user,cart,setCart,total}}>
+    <UserContext.Provider value={{ storetokeninLS ,LogoutUser,authorizationtoken, user,cart,setCart,total,searchItem,setSearchItem}}>
       {children}
     </UserContext.Provider>
   );

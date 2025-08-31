@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import UserContext from "../useContext/UserContext";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const params = useParams();
@@ -30,6 +31,7 @@ const ProductDetails = () => {
 const handleAddtoCart = (e) => {
   e.preventDefault();
   // Always parse correctly and fallback to empty array
+  toast.success("Item added to Cart!");
   let cart = [];
   try {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -68,7 +70,7 @@ const handleAddtoCart = (e) => {
     getallfoodItems();
   }, []);
   return (
-    <div className="font-sans bg-[#f9f8f4]">  
+    <div className="font-sans py-16 pt-5">  
       {/* Breadcrumb */}
       <div className="px-8  py-10 text-xl font-medium text-gray-600 capitalize">
         Home / {item.category} /{" "}

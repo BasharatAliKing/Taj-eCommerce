@@ -27,9 +27,8 @@ const CheckoutPage = () => {
     e.preventDefault();
     console.log("Order submitted:", formData);
   };
-console.log(cart);
   return (
-    <div className="min-h-screen font-sketch bg-gray-50 flex justify-center py-10 px-4">
+    <div className="min-h-screen font-sketch flex justify-center py-10 px-4">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Side */}
         <form
@@ -169,7 +168,7 @@ console.log(cart);
           <h2 className="font-semibold text-lg mb-4">Order Summary</h2>
         {
           cart.map((val,index)=>(
-              <div className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4">
+              <div key={index} className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4">
             <img
               src={`http://localhost:3000/${val.imageUrl}`}
               alt="Product"
@@ -177,7 +176,8 @@ console.log(cart);
             />
             <div className="flex-1">
               <p className="font-semibold">{val.name}</p>
-              <p className="text-gray-600">£{val.price}</p>
+              <p className="text-gray-600">Price: £{val.price}  </p>
+              <p className="text-gray-600">Quantity: {val.quantity}  </p>
             </div>
           </div>
           ))
