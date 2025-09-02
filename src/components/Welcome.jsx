@@ -5,7 +5,7 @@ const Welcome = () => {
     <>
       <div id='about-us' className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
         <div className="container">
-          <img src="/welcome.png" className="w-full md:w-[60%]" alt="" />
+          <img src="/kitchen-to-craving.png" className="w-full md:w-[60%]" alt="" />
         </div>
       </div>
       {/* yellow line image */}

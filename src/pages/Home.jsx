@@ -84,9 +84,9 @@ const Home = () => {
         <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="my-img" />
       </div>
       {/* my lahore rewards */}
-     <Rewards/>
+     {/* <Rewards/> */}
       {/* yellow line image */}
-      <div className="hidden md:flex -mt-25 relative z-10">
+      <div className="hidden md:flex -mt-10 relative z-10">
         <svg
           width="100%"
           height="100"
@@ -111,13 +111,13 @@ const Home = () => {
          <OurVenues />
       </div>
       {/* fusion to be celebrated */}
-      <Fusion/>
+      {/* <Fusion/> */}
       {/* instagram post */}
-      <div className="bg-charkol md:pt-40 py-30 md:py-16 -mt-10">
+      {/* <div className="bg-charkol md:pt-40 py-30 md:py-16 -mt-10">
         <h1 className="text-xl text-white mt-5 font-bold uppercase text-center font-dancing">
           Checkout our Instagram for latest updates
         </h1>
-      </div>
+      </div> */}
       {/* Catering for Special Occasions */}
      {/* <Catering/> */}
       <Footer/>

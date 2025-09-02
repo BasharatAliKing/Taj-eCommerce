@@ -81,9 +81,6 @@ const Footer = () => {
               <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Charity request
               </Link>
-              <a href="#catering" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
-                Catering & Events
-              </a>
               <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Gallery
               </Link>
@@ -94,43 +91,14 @@ const Footer = () => {
               Quick Links
             </h2>
             <ul className="md:w-1/2 flex flex-col gap-3 text-white">
-              <Link
-                to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
-              >
-               Join the Family
-              </Link>
-              <Link
-                to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
-              >
-                Our Heritage
-              </Link>
+             
               <li
                 className="relative w-full flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
               Allergen Info 
                 {/* >    Advertise Our Magazine / Advertise on Social Media / Advertise on podcast / */}
               </li>
-              <Link
-                to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
-              >
-                Gift Cards
-              </Link>
-              <Link
-                to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
-              >
-              Rewards
-              </Link>
-           
-              <Link
-                to="/"
-                className="flex flex-row whitespace-nowrap gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
-              >
-                Gallery
-              </Link>
+             
             </ul>
           </div>
           <div className="flex flex-col gap-3">
