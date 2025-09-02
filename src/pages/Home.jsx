@@ -86,7 +86,7 @@ const Home = () => {
       {/* my lahore rewards */}
      {/* <Rewards/> */}
       {/* yellow line image */}
-      <div className="hidden md:flex -mt-10 relative z-10">
+      <div className="hidden md:flex w-1/2 ml-auto -mt-20 relative z-10">
         <svg
           width="100%"
           height="100"
