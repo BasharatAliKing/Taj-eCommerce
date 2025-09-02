@@ -7,7 +7,6 @@ import Fusion from "../components/Fusion";
 import Rewards from "../components/Rewards";
 import Welcome from "../components/Welcome";
 import Menu from "../components/Menu";
-import Catering from "../components/Catering";
 const Home = () => {
   return (
     <>
@@ -19,9 +18,9 @@ const Home = () => {
       {/* food to make */}
       <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/bbq.webp)]">
         <img
-          src="/british-asian-kitchen.png"
+          src="/hungry-lets-fix.png"
           className="absolute -top-15 md:-top-25 right-5 md:right-0 md:left-20 z-10 w-[30%] md:w-[15%]"
-          alt=""
+          alt="my-img"
         />
         <img
           src="/stars.svg"

@@ -27,7 +27,6 @@ const ProductDetails = () => {
       console.log(error);
     }
   };
-
 const handleAddtoCart = (e) => {
   e.preventDefault();
   // Always parse correctly and fallback to empty array

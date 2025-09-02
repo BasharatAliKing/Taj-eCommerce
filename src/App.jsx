@@ -22,6 +22,7 @@ import AdminUpdateFoodItem from "./pages/admin/foodItems/AdminUpdateFoodItem";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ErrorPage from "./pages/ErrorPage";
+import OrderPage from "./pages/OrderPage";
 const App = () => {
    const {user}=useContext(UserContext);
   return (
@@ -40,6 +41,7 @@ const App = () => {
            <Route path="cart" element={<CartPage/>} />
            <Route path="checkout" element={<CheckoutPage/>} />
            <Route path="/confirm-order" element={<OrderConfirmation/>} />
+              <Route path="/order" element={<OrderPage/>} />
            </Route>
            {/* admin routes here */}
            {
@@ -52,6 +54,7 @@ const App = () => {
               <Route path="foodItems" element={<AdminFoodItems />} />
               <Route path="addFoodItem" element={<AdminAddFoodItem />} />
               <Route path="updateFoodItem/:id" element={<AdminUpdateFoodItem />} />
+           
               </Route>
             ):
           <Route path='*' element={<ErrorPage/>}/>
