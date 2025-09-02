@@ -81,13 +81,18 @@ const Home = () => {
           className="absolute left-10  md:left-20 top-10  z-20 w-[15%] md:w-[6%]"
           alt="my-img"
         />
-        <img src="/bg.png" className="relative w-full h-[200px] md:h-auto -mt-20 md:-mt-30 z-10" alt="my-img" />
+        <img src="/bg.png" className="relative w-full h-[250px] md:h-auto -mt-30 md:-mt-30 z-10" alt="my-img" />
       </div>
       {/* my lahore rewards */}
      {/* <Rewards/> */}
-      {/* yellow line image */}
-      <div className="hidden md:flex w-1/2 ml-auto -mt-20 relative z-10">
-        <svg
+     
+      <div className="hidden md:flex flex-col">
+         <OurVenues />
+      </div>
+       {/* yellow line image */}
+      <div className="hidden md:flex w-full relative z-10">
+     <div className="absolute -mt-15 w-full">
+         <svg
           width="100%"
           height="100"
           viewBox="0 0 1200 100"
@@ -106,9 +111,7 @@ const Home = () => {
             <polygon points="1080,0 1140,0 1180,100 1120,100" />
           </g>
         </svg>
-      </div>
-      <div className="hidden md:flex flex-col">
-         <OurVenues />
+     </div>
       </div>
       {/* fusion to be celebrated */}
       {/* <Fusion/> */}
