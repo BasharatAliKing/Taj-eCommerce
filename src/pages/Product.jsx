@@ -81,12 +81,12 @@ const Product = () => {
               alt={product.name}
               className="w-full h-64 object-cover"
             />
-            <div className="p-4 text-center flex font-sketch flex-col gap-2">
+            <div className="p-4 text-center flex w-full font-sketch flex-col gap-2">
               <h3 className="text-lg font-semibold">{product.name}</h3>
               <p className="text-gray-700">£{product.price}</p>
               <Link
                 to={`/product-details/${product._id}`}
-                className="cursor-pointer bg-[#FFD600] text-black font-semibold px-6 py-2 rounded hover:bg-yellow-400 transition"
+                className="cursor-pointer bg-[#FFD600] text-black  font-semibold px-6 py-2 rounded hover:bg-yellow-400 transition"
               >
                 Buy now
               </Link>
