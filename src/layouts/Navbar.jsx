@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { FaBars } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 import { IoCloseSharp } from 'react-icons/io5';
 import { FaChevronDown, FaInstagram, FaTelegramPlane, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -8,7 +8,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-
   return (
     <div className="absolute container flex w-full p-2 z-20">
       {/* Logo */}
@@ -17,7 +16,6 @@ const Navbar = () => {
         alt="logo"
         className="w-[30%] md:w-[10%] my-5 rounded-full"
       />
-
       {/* Toggle Button */}
       <div
         onClick={() => setNavbar(!navbar)}
@@ -31,7 +29,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-
       {/* Mobile Menu Overlay */}
       {navbar && (
         <div className="fixed bg-charkol h-full overflow-scroll w-full left-0 top-0 z-40">

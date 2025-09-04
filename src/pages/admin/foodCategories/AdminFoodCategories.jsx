@@ -28,6 +28,10 @@ const AdminFoodCategories = () => {
  //            GET FOOD ITEMS
  //************************************************ */
   const deleteCategory=async(id)=>{
+     const confirmDelete = window.confirm(
+      "Are you sure you want to delete this Category ?"
+    );
+     if (!confirmDelete) return;
     try{
       const response=await fetch(`http://localhost:3000/deletecategory/${id}`,{
         method:"DELETE",

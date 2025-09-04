@@ -3,10 +3,9 @@ import Hero from "../components/Hero";
 import Footer from "../layouts/Footer";
 import Navbar from "../layouts/Navbar";
 import OurVenues from "../components/OurVenues";
-import Fusion from "../components/Fusion";
-import Rewards from "../components/Rewards";
 import Welcome from "../components/Welcome";
 import Menu from "../components/Menu";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -50,9 +49,9 @@ const Home = () => {
             our 100% halal choices below:
           </p>
           <div className="flex flex-col md:flex-row gap-5 md:w-[50%]">
-            <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
+            <Link to='/our-menu' className="bg-[#FFD300] text-center p-2 font-sketch md:p-3 text-black hover:animate-scl font-medium text-base md:text-lg w-full rounded-md">
               MAIN MENU
-            </button>
+            </Link>
             {/* <button className="bg-[#FFD300] p-3 font-sketch md:p-5 text-white hover:animate-scl font-medium text-base w-full rounded-md">
               CATERING
             </button> */}
@@ -85,7 +84,6 @@ const Home = () => {
       </div>
       {/* my lahore rewards */}
      {/* <Rewards/> */}
-     
       <div className="hidden md:flex flex-col">
          <OurVenues />
       </div>

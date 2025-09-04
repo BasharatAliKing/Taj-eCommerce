@@ -23,11 +23,14 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ErrorPage from "./pages/ErrorPage";
 import OrderPage from "./pages/OrderPage";
+import OurMenu from "./pages/OurMenu";
+import ScrollToTop from "./pages/ScrollToTop";
 const App = () => {
    const {user}=useContext(UserContext);
   return (
     <>
      <Router>
+          <ScrollToTop/>
       <Routes>
         <Route>
           <Route path="/login" element={<Login/>}/>
@@ -40,8 +43,9 @@ const App = () => {
            <Route path="product-details/:id" element={<ProductDetails/>} />
            <Route path="cart" element={<CartPage/>} />
            <Route path="checkout" element={<CheckoutPage/>} />
-           <Route path="/confirm-order" element={<OrderConfirmation/>} />
-              <Route path="/order" element={<OrderPage/>} />
+           <Route path="confirm-order" element={<OrderConfirmation/>} />
+           <Route path="our-menu" element={<OurMenu/>} />
+              {/* <Route path="/order" element={<OrderPage/>} /> */}
            </Route>
            {/* admin routes here */}
            {

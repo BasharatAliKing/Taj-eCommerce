@@ -2,9 +2,13 @@ import React, { useContext, useState } from "react";
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 import UserContext from "../useContext/UserContext";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
-  const {cart,total}=useContext(UserContext);
+  const navigate = useNavigate();
+  const { cart, total, setCart } = useContext(UserContext);
+
   const [formData, setFormData] = useState({
     email: "",
     firstName: "",
@@ -19,18 +23,61 @@ const CheckoutPage = () => {
     cardName: "",
   });
 
+  // handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  // handle order submit
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Order submitted:", formData);
+
+    if (!cart || cart.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/order-food", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user: formData,
+          items: cart,
+          totalAmount: total,
+        }),
+      });
+
+      // safely parse JSON response
+      let res_data = {};
+      try {
+        res_data = await response.json();
+      } catch (jsonErr) {
+        console.error("Invalid JSON response:", jsonErr);
+      }
+
+      if (response.ok) {
+        // clear cart
+        localStorage.setItem("cart", JSON.stringify([]));
+        setCart([]);
+
+        toast.success("Order placed successfully!");
+        navigate("/confirm-order");
+      } else {
+        toast.error(res_data.message || "Failed to place order");
+      }
+    } catch (err) {
+      console.error("Error placing order:", err);
+      toast.error("Something went wrong while placing your order");
+    }
   };
+
   return (
     <div className="min-h-screen font-sketch flex justify-center py-10 px-4">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Side */}
+        {/* Left Side - Checkout Form */}
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded-2xl p-6 space-y-6"
@@ -48,6 +95,7 @@ const CheckoutPage = () => {
               required
             />
           </div>
+
           {/* Delivery */}
           <div>
             <h2 className="font-semibold text-lg mb-2">Delivery</h2>
@@ -158,36 +206,36 @@ const CheckoutPage = () => {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg mt-4"
+            className="w-full bg-blue-600 cursor-pointer text-white py-3 rounded-lg mt-4"
           >
-            Review order
+            Place Order <span>(£{total})</span>
           </button>
         </form>
+
         {/* Right Side - Order Summary */}
         <div className="bg-white shadow-md rounded-2xl p-6 h-fit">
           <h2 className="font-semibold text-lg mb-4">Order Summary</h2>
-        {
-          cart.map((val,index)=>(
-              <div key={index} className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4">
-            <img
-              src={`http://localhost:3000/${val.imageUrl}`}
-              alt="Product"
-              className="w-16 h-16 rounded-lg object-cover"
-            />
-            <div className="flex-1">
-              <p className="font-semibold">{val.name}</p>
-              <p className="text-gray-600">Price: £{val.price}  </p>
-              <p className="text-gray-600">Quantity: {val.quantity}  </p>
-            </div>
-          </div>
-          ))
-        }
-          {/* <input
-            type="text"
-            placeholder="Discount code or gift card"
-            className="w-full border rounded-lg p-3"
-          />
-          <button className="w-full border rounded-lg p-2 mt-2">Apply</button> */}
+          {cart && cart.length > 0 ? (
+            cart.map((val, index) => (
+              <div
+                key={index}
+                className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4"
+              >
+                <img
+                  src={val.imageUrl?.startsWith("http") ? val.imageUrl : `http://localhost:3000/${val.imageUrl}`}
+                  alt={val.name}
+                  className="w-16 h-16 rounded-lg object-cover"
+                />
+                <div className="flex-1">
+                  <p className="font-semibold">{val.name}</p>
+                  <p className="text-gray-600">Price: £{val.price} </p>
+                  <p className="text-gray-600">Quantity: {val.quantity} </p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-600">Your cart is empty.</p>
+          )}
 
           <div className="mt-6 border-t pt-4 space-y-2">
             <div className="flex justify-between">

@@ -1,31 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../useContext/UserContext"; // adjust path if needed
 
 const CartPage = () => {
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+  const { cart, setCart, total } = useContext(UserContext);
 
-  // Load from localStorage
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(storedCart);
-    updateTotal(storedCart);
-  }, []);
-
-  // Update localStorage + total
+  // Update cart and sync LS
   const updateCart = (newCart) => {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
-    updateTotal(newCart);
-  };
-
-  // Total calculation
-  const updateTotal = (items) => {
-    const cartTotal = items.reduce(
-      (acc, item) => acc + item.price * item.quantity,
-      0
-    );
-    setTotal(cartTotal);
   };
 
   // Increase qty
@@ -135,10 +118,16 @@ const CartPage = () => {
                 <span>Total</span>
                 <span className="text-orange-600">£ {total.toFixed(2)}</span>
               </div>
-              <Link to='/checkout' className="text-center w-full bg-charkol curor-pointer hover:bg-[#6e6e6e] text-white py-3 rounded-xl transition shadow-md">
+              <Link
+                to="/checkout"
+                className="text-center w-full bg-charkol cursor-pointer hover:bg-[#6e6e6e] text-white py-3 rounded-xl transition shadow-md"
+              >
                 Proceed to Checkout
               </Link>
-              <Link to='/' className=" w-full border text-center border-gray-400 text-gray-700 py-3 rounded-xl hover:bg-gray-100 transition">
+              <Link
+                to="/"
+                className=" w-full border text-center border-gray-400 text-gray-700 py-3 rounded-xl hover:bg-gray-100 transition"
+              >
                 Continue Shopping
               </Link>
             </div>

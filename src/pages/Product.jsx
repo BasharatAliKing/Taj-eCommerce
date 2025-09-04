@@ -36,7 +36,6 @@ const Product = () => {
       console.log(error);
     }
   };
-
   const filteredCategory = categories.filter(
     (cat) =>
       cat?.categoryname?.toLowerCase() === (params.id || "").toLowerCase()

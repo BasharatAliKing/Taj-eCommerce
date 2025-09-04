@@ -9,6 +9,10 @@ const AdminFoodItems = () => {
   //            DELETE FOOD ITEMS
   //************************************************ */
   const deleteFoodItem = async (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this Food Item ?"
+    );
+    if (!confirmDelete) return;
     try {
       const response = await fetch(
         `http://localhost:3000/deletefooditem/${id}`,

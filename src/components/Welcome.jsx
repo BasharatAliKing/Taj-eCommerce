@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   return (
     <>
       <div id='about-us' className="flex bg-[#4A4A4A]  py-16 lg:pb-50">
-        <div className="container">
+        <div className="container flex flex-col md:flex-row">
           <img src="/kitchen-cravings.png" className="w-full md:w-[40%]" alt="" />
+         <Link to='/our-menu' className='w-full m-auto'> <img src="/baguette.png" alt="my-img" className='w-full md:w-[50%] mx-auto' /></Link>
         </div>
       </div>
       {/* yellow line image */}
