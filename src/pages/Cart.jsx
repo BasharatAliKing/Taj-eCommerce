@@ -55,7 +55,7 @@ const CartPage = () => {
                   {/* Product Info */}
                   <div className="flex items-center gap-4">
                     <img
-                      src={`http://localhost:3000/${item.imageUrl}`}
+                      src={`http://168.231.116.183:3000/${item.imageUrl}`}
                       alt={item.name}
                       className="w-24 h-24 object-cover rounded-xl border"
                     />

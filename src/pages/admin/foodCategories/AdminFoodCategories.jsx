@@ -11,7 +11,7 @@ const AdminFoodCategories = () => {
  //************************************************ */
   const getallfoodItems = async () => {
     try {
-      const response = await fetch("http://localhost:3000/getallcategory", {
+      const response = await fetch("http://168.231.116.183:3000/getallcategory", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const AdminFoodCategories = () => {
     );
      if (!confirmDelete) return;
     try{
-      const response=await fetch(`http://localhost:3000/deletecategory/${id}`,{
+      const response=await fetch(`http://168.231.116.183:3000/deletecategory/${id}`,{
         method:"DELETE",
         headers:{
           "Content-Type":"application/json"

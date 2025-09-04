@@ -22,7 +22,7 @@
 //   };
 //   const userAuthentication = async () => {
 //     try {
-//       const response = await fetch(`http://localhost:3000/user`, {
+//       const response = await fetch(`http://168.231.116.183:3000/user`, {
 //         method: "GET",
 //         headers: {
 //           Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const UserContextProvider = ({ children }) => {
   const userAuthentication = async () => {
     if (!token) return;
     try {
-      const response = await fetch(`http://localhost:3000/user`, {
+      const response = await fetch(`http://168.231.116.183:3000/user`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
