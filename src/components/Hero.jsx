@@ -5,7 +5,7 @@ const Hero = () => {
 
       const getAllCategory=async()=>{
         try {
-            const response=await fetch("http://168.231.116.183:3000/getallcategory",{
+            const response=await fetch("http://localhost:3000/getallcategory",{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"

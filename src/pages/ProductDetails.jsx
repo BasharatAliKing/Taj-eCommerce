@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const getallfoodItems = async () => {
     try {
       const response = await fetch(
-        `http://168.231.116.183:3000/getfooditembyid/${params.id}`,
+        `http://localhost:3000/getfooditembyid/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -81,7 +81,7 @@ const handleAddtoCart = (e) => {
           {/* Product Images */}
           <div>
             <img
-              src={`http://168.231.116.183:3000/${item.imageUrl}`}
+              src={`http://localhost:3000/${item.imageUrl}`}
               alt={item.name}
               className="rounded-lg shadow-md"
             />

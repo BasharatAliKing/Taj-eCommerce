@@ -8,7 +8,7 @@ const Product = () => {
 
   const getallfoodItems = async () => {
     try {
-      const response = await fetch("http://168.231.116.183:3000/getallfoodItems", {
+      const response = await fetch("http://localhost:3000/getallfoodItems", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const Product = () => {
   };
   const getAllCategory = async () => {
     try {
-      const response = await fetch("http://168.231.116.183:3000/getallcategory", {
+      const response = await fetch("http://localhost:3000/getallcategory", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Product = () => {
             className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center"
           >
             <img
-              src={`http://168.231.116.183:3000/${product.imageUrl}`}
+              src={`http://localhost:3000/${product.imageUrl}`}
               alt={product.name}
               className="w-full h-64 object-cover"
             />

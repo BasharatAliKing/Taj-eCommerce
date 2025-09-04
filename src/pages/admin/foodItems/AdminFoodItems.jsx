@@ -15,7 +15,7 @@ const AdminFoodItems = () => {
     if (!confirmDelete) return;
     try {
       const response = await fetch(
-        `http://168.231.116.183:3000/deletefooditem/${id}`,
+        `http://localhost:3000/deletefooditem/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -37,7 +37,7 @@ const AdminFoodItems = () => {
   //************************************************ */
   const getallfoodItems = async () => {
     try {
-      const response = await fetch("http://168.231.116.183:3000/getallfoodItems", {
+      const response = await fetch("http://localhost:3000/getallfoodItems", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const AdminFoodItems = () => {
                 <td className="px-6 py-4 whitespace-nowrap">
                   <img
                     className="h-10 w-10"
-                    src={`http://168.231.116.183:3000/${val.imageUrl}`}
+                    src={`http://localhost:3000/${val.imageUrl}`}
                     alt=""
                   />
                 </td>

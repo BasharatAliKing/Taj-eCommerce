@@ -17,7 +17,7 @@ const AdminAddCategory = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await fetch('http://168.231.116.183:3000/addcategory',{
+            const response=await fetch('http://localhost:3000/addcategory',{
                 method:"POST",
                 headers:{
                     'Content-Type':'application/json',
