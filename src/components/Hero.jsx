@@ -36,16 +36,16 @@ const Hero = () => {
           {/* <button className="flex w-full cursor-pointer md:w-[150px] hover:animate-scl h-auto  sm:h-[100px]  md:h-[150px] items-center justify-center text-base  md:text-lg font-dancing font-bold bg-cover bg-no-repeat border-[3px] border-yellow rounded-md p-2    bg-[url(/button-pattern-yellow.png)]">EVENTS & CATERING</button>  */}
         </div>
       </div>
-      <div className="absolute top-[20%] md:top-[25%] right-15 flex flex-col gap-0">
-          <div className="absolute top-[2px] left-20 animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-9 left-[22px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-23  animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-38 left-[16px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-6 right-8 animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-[90px] right-[0px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-[154px] right-5 animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <div className="absolute top-[192px] left-24 animate-bulb w-2 h-2 bg-white rounded-full"></div>
-          <img src="/hungry-lets-fix.png" alt="my-img" className="border-[8px] border-yellow rounded-full w-50 h-50" />
+      <div className="absolute top-[20%] md:top-[25%] right-20  md:right-35 flex flex-col gap-0">
+          <div className="absolute top-[16px] left-20 animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-12 left-[30px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-25 left-[14px]  animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-38 left-[36px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-7 right-13 animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-[90px] right-[15px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-[154px] right-[38px] animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute top-[178px] left-24 animate-bulb w-2 h-2 bg-white rounded-full"></div>
+          <img src="/hungry-lets-fix.png" alt="my-img" className=" rounded-full w-50 h-50" />
           <img src="/order-onlinetwo.png" width="100%" className="absolute top-27" alt="" />
       </div>
     </section>
