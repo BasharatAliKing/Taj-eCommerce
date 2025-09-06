@@ -66,12 +66,11 @@ const Footer = () => {
               <a href="#about-us" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Our Story
               </a>
-              <a
-                href="#food-menu"
+              <Link to="/our-menu"
                 className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
               >
                 Our Menus
-              </a>
+              </Link>
               <a
                 href="#where-to-find-us"
                 className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]"
@@ -81,7 +80,7 @@ const Footer = () => {
               <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Charity request
               </Link>
-              <Link to="/" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
+              <Link to="/gallery" className="flex flex-row gap-1 items-center font-medium font-sketch duration-700 cursor-pointer hover:text-yellow text-[14px] md:text-[15px]">
                 Gallery
               </Link>
             </ul>

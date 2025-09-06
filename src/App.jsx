@@ -25,6 +25,11 @@ import ErrorPage from "./pages/ErrorPage";
 import OrderPage from "./pages/OrderPage";
 import OurMenu from "./pages/OurMenu";
 import ScrollToTop from "./pages/ScrollToTop";
+import Gallery from "./pages/Gallery";
+import AdminGallery from "./pages/admin/gallery/AdminGallery";
+import AdminAddGallery from "./pages/admin/gallery/AdminAddGallery";
+import AdminUpdateGallery from "./pages/admin/gallery/AdminUpdateGallery";
+import AdminOrder from "./pages/admin/Orders/AdminOrder";
 const App = () => {
    const {user}=useContext(UserContext);
   return (
@@ -45,6 +50,8 @@ const App = () => {
            <Route path="checkout" element={<CheckoutPage/>} />
            <Route path="confirm-order" element={<OrderConfirmation/>} />
            <Route path="our-menu" element={<OurMenu/>} />
+           <Route path="gallery" element={<Gallery/>} />
+         
               {/* <Route path="/order" element={<OrderPage/>} /> */}
            </Route>
            {/* admin routes here */}
@@ -58,7 +65,10 @@ const App = () => {
               <Route path="foodItems" element={<AdminFoodItems />} />
               <Route path="addFoodItem" element={<AdminAddFoodItem />} />
               <Route path="updateFoodItem/:id" element={<AdminUpdateFoodItem />} />
-           
+              <Route path="gallery" element={<AdminGallery/>} />
+              <Route path="add-gallery-image" element={<AdminAddGallery/>} />
+              <Route path="update-gallery-image/:id" element={<AdminUpdateGallery/>} />
+                <Route path="orders" element={<AdminOrder/>}/>
               </Route>
             ):
           <Route path='*' element={<ErrorPage/>}/>

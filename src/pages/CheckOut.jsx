@@ -36,7 +36,7 @@ const CheckoutPage = () => {
     }
 
     try {
-      const response = await fetch("http://168.231.116.183:3000/order-food", {
+      const response = await fetch("http://localhost:3000/order-food", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -220,7 +220,7 @@ const CheckoutPage = () => {
                 className="flex items-center bg-gray-100 rounded-md p-2 gap-4 mb-4"
               >
                 <img
-                  src={val.imageUrl?.startsWith("http") ? val.imageUrl : `http://168.231.116.183:3000/${val.imageUrl}`}
+                  src={val.imageUrl?.startsWith("http") ? val.imageUrl : `http://localhost:3000/${val.imageUrl}`}
                   alt={val.name}
                   className="w-16 h-16 rounded-lg object-cover"
                 />

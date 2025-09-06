@@ -20,7 +20,7 @@ const AdminUpdateCategory = () => {
     //************************************************** */
     const getCategoryById=async()=>{
           try{
-            const response=await fetch(`http://168.231.116.183:3000/getcategorybyid/${params.id}`,{
+            const response=await fetch(`http://localhost:3000/getcategorybyid/${params.id}`,{
                 method:"GET",
                 headers:{
                     'Content-Type':'application/json',
@@ -44,7 +44,7 @@ const AdminUpdateCategory = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await fetch(`http://168.231.116.183:3000/updatecategory/${params.id}`,{
+            const response=await fetch(`http://localhost:3000/updatecategory/${params.id}`,{
                 method:"PUT",
                 headers:{
                     'Content-Type':'application/json',

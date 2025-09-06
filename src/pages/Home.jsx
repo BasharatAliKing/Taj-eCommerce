@@ -16,11 +16,11 @@ const Home = () => {
       <Welcome/>
       {/* food to make */}
       <section className="relative h-[60vh] lg:h-[120vh] bg-cover bg-center bg-[url(/bbq.webp)]">
-        <img
+        {/* <img
           src="/hungry-lets-fix.png"
           className="absolute -top-15 md:-top-25 right-5 md:right-0 md:left-20 z-10 w-[30%] md:w-[15%]"
           alt="my-img"
-        />
+        /> */}
         <img
           src="/stars.svg"
           className="absolute -top-5 right-20 z-10"

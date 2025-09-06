@@ -29,6 +29,12 @@ const SIDEBAR_ITEMS = [
     href: "/admin/foodItems",
   },
   {
+    name: "Gallery",
+    icon: BarChart2,
+    color: "#6366f1",
+    href: "/admin/gallery",
+  },
+  {
     name: "Orders",
     icon: BarChart2,
     color: "#6366f1",

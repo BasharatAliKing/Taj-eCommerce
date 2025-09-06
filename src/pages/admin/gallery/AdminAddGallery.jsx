@@ -1,40 +1,51 @@
-import React, { useState } from "react";
+ import React, { useEffect, useState } from "react";
 import Navbar from "../../../layouts/admin/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { toast } from "react-toastify";
 
-const AdminAddCategory = () => {
-    const navigate=useNavigate();
-    const [form,setForm]=useState({
-        categoryname:"",
-        categorydetails:"",
+const AdminAddGallery = () => {
+  const navigate = useNavigate();
+  const [categories, setCategories] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    image: "",
+  });
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    if (type === "file") {
+      setFormData((prev) => ({ ...prev, [name]: files[0] }));
+    }else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  //****
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  const payload = new FormData();
+  for (const key in formData) {
+    if (formData[key]) {
+      payload.append(key, formData[key]);
+    }
+  }
+  try {
+    const response = await fetch("http://localhost:3000/addImageGallery", {
+      method: "POST",
+      body: payload,
     });
-    const handleChange=(e)=>{
-       const {name,value}=e.target;
-       setForm({...form,[name]:value});
+    const res_data = await response.json();
+    if (response.ok) {
+      toast.success("Image Added Successfully.");
+      navigate("/admin/gallery");
+    } else {
+      toast.error(res_data.message || "Failed to add Image");
     }
-    const handleSubmit=async(e)=>{
-        e.preventDefault();
-        try{
-            const response=await fetch('http://localhost:3000/addcategory',{
-                method:"POST",
-                headers:{
-                    'Content-Type':'application/json',
-                },
-                 body:JSON.stringify(form),
-            });
-            const res_data=await response.json();
-            if(response.ok){
-                toast.success("Category Added Successfully.");
-                navigate('/admin/categories');
-            }else{
-                toast.error(res_data);
-            }
-        }catch(err){
-            console.log(err);
-        }
-    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
   return (
     <div className="flex-1 overflow-auto relative z-10">
       <Navbar title="Green CEO " />
@@ -44,7 +55,7 @@ const AdminAddCategory = () => {
           action=""
           className=" md:w-1/2 bg-gray-700 p-5 rounded-md flex flex-col gap-3"
         >
-          <Link to="/admin/categories" className="ml-auto text-2xl">
+          <Link to="/admin/gallery" className="ml-auto text-2xl">
             <IoMdCloseCircleOutline />
           </Link>
 
@@ -53,12 +64,12 @@ const AdminAddCategory = () => {
               htmlFor=""
               className="text-md lg:text-lg font-sketch font-medium"
             >
-              Category Name
+              Name
             </label>
             <input
               type="text"
-              name="categoryname"
-              value={form.categoryname}
+              name="name"
+              value={formData.name}
               onChange={handleChange}
               className="bg-gray p-2 text-black outline-none rounded-md"
             />
@@ -68,21 +79,20 @@ const AdminAddCategory = () => {
               htmlFor=""
               className="text-md lg:text-lg font-sketch font-medium"
             >
-              Category Description
+              Image
             </label>
-            <textarea
-              type="text"
-              name="categorydetails"
-              value={form.categorydetails}
+            <input
+              type="file"
+              name="image"
               onChange={handleChange}
               className="bg-gray p-2 text-black outline-none rounded-md"
-            ></textarea>
+            />
           </div>
           <button
             type="submit"
             className="bg-yellow duration-700 cursor-pointer p-2 roumd text-md font-sketch text-black rounded-md"
           >
-            Submit
+            Add Image
           </button>
         </form>
       </div>
@@ -90,4 +100,4 @@ const AdminAddCategory = () => {
   );
 };
 
-export default AdminAddCategory;
+export default AdminAddGallery;

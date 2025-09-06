@@ -32,7 +32,7 @@ const AdminUpdateFoodItem = () => {
   //************************************************ */
   const getallCategories = async () => {
     try {
-      const response = await fetch("http://168.231.116.183:3000/getallcategory", {
+      const response = await fetch("http://localhost:3000/getallcategory", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const AdminUpdateFoodItem = () => {
   const getFoodItemById = async () => {
     try {
       const response = await fetch(
-        `http://168.231.116.183:3000/getfooditembyid/${params.id}`,
+        `http://localhost:3000/getfooditembyid/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -85,7 +85,7 @@ const AdminUpdateFoodItem = () => {
       }
     }
     try {
-      const response = await fetch(`http://168.231.116.183:3000/updatefooditem/${params.id}`, {
+      const response = await fetch(`http://localhost:3000/updatefooditem/${params.id}`, {
         method: "PUT",
         body: payload,
       });
@@ -197,7 +197,7 @@ const AdminUpdateFoodItem = () => {
             </label>
             {formData.imageUrl && (
               <img
-                src={`http://168.231.116.183:3000/${formData.imageUrl}`}
+                src={`http://localhost:3000/${formData.imageUrl}`}
                 alt="Current"
                 className="w-32 h-32 object-cover mb-2 rounded"
               />
